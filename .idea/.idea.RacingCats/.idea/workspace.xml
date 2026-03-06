@@ -12,12 +12,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90f787ec-00a1-4fd7-9a18-525d0d9c354e" name="Changes" comment="" />
+    <list default="true" id="90f787ec-00a1-4fd7-9a18-525d0d9c354e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Source/RacingCats/Cars/RaceCarBase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RacingCats/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RacingCats/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/Vehicles/BP_RaceCarBase.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/Vehicles/BP_RaceCarBase.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/System/Input/RaceGameMode/IMC_Vehicle.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/System/Input/RaceGameMode/IMC_Vehicle.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RacingCats/RaceGameMode/RaceData.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RacingCats/RaceGameMode/RaceData.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RacingCats/RaceGameMode/RaceGameMode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RacingCats/RaceGameMode/RaceGameMode.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RacingCats/RaceGameMode/RacerData.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RacingCats/RaceGameMode/RacerData.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RacingCats/RacecarBase.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RacingCats/RacecarBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RacingCats/Cars/RaceCarBase.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/RacingCats/RacingCats.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/RacingCats/RacingCats.Build.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../../Program Files/Epic Games/UE_5.7/Engine/Source/Runtime/AIModule/Classes/AITypes.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../Program Files/Epic Games/UE_5.7/Engine/Source/ThirdParty/simde/simde.Build.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -30,18 +50,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="C/C++ Project.RacingCats">
     <configuration name="RacingCats" type="CppProject" factoryName="C++ Project">
       <configuration_1 setup="1">
@@ -160,13 +181,14 @@
       <option name="presentableId" value="Default" />
       <updated>1772550576580</updated>
       <workItem from="1772550578566" duration="945000" />
-      <workItem from="1772551649753" duration="22354000" />
+      <workItem from="1772551649753" duration="31695000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

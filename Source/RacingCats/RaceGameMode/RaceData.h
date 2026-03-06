@@ -1,4 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
 
@@ -13,12 +12,13 @@
 USTRUCT(BlueprintType)
 struct RACINGCATS_API FRaceData
 {
-	GENERATED_BODY()
+	GENERATED_BODY();
 
 public:
-	
+
+	/** This is a list of all the cars in the Race, the order represents their position in the race*/
 	UPROPERTY(BlueprintReadOnly, Category="Race")
-	TArray<FRacerData> RacersData;
+	TArray<ARaceCarBase*> Racers;
 	
-	void SetRacers(const TArray<FRacerData>& ParamRacersData) {	RacersData = ParamRacersData; }
+	void SetRacers(const TArray<ARaceCarBase*>& ParamRacers) {	Racers = ParamRacers; }
 };

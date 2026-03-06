@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "RacingCats/Cars/RaceCarBase.h"
 #include "RacerData.generated.h"
 
 /**
@@ -11,14 +12,14 @@
 USTRUCT(BlueprintType)
 struct RACINGCATS_API FRacerData 
 {
-	GENERATED_BODY()
+	GENERATED_BODY();
 
 public:
 
 	UPROPERTY(BlueprintReadOnly, Category="GameMode")
-	APawn* Pawn;
+	ARaceCarBase* Car;
 
 	UPROPERTY(BlueprintReadOnly, Category="GameMode")
-	int32 RacePosition;
+	int32 Score;
 	
 };
