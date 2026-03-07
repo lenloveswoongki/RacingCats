@@ -34,21 +34,48 @@ protected:
 	UStaticMeshComponent* CarMesh;
 
 	// Wheels
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Wheels")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Wheels")
 	USceneComponent* FLWheel;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Wheels")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Wheels")
 	USceneComponent* FRWheel;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Wheels")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Wheels")
 	USceneComponent* BLWheel;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Wheels")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Wheels")
 	USceneComponent* BRWheel;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Wheels")
+	UStaticMeshComponent* FLWheelMesh;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Wheels")
+	UStaticMeshComponent* FRWheelMesh;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Wheels")
+	UStaticMeshComponent* BLWheelMesh;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Wheels")
+	UStaticMeshComponent* BRWheelMesh;
 
+	/** The speed in which the wheels rotates towards the desire direction */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = 0.f, ClampMax = 5.f), Category= "Wheels")
+	float WheelsRotationSpeed = 3.f;
+	/** The speed in which the wheels realign to the car rotation */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = 0.f, ClampMax = 5.f), Category= "Wheels")
+	float WheelsRotationNormalizeSpeed = 2.f;
+	/* The force that the wheels rotate on the ground**/
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = 0.f, ClampMax = 20.f), Category= "Wheels")
+	float WheelsSpinForce = 20.f;
+	/* The speed that the wheels rotate on the ground**/
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMin = 0.f, ClampMax = 5.f), Category= "Wheels")
+	float WheelsSpinSpeed = 0.5f;
+
+	
 	// Suspension
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "Wheels")
 	float SuspensionForce = 20000.f;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "Wheels")
 	float SuspensionDamping = 2.f;
-
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (ClampMax = 5.f, ClampMin = 0.f), Category= "Wheels")
+	float RotationSpeed = 3.0f;
+	UPROPERTY(BlueprintReadOnly, Category="Wheels")
+	bool bIsGrounded = false;
+	
+	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category= "Speed and Accleration")
 	float MaxSpeed = 15000.f;
 
@@ -86,10 +113,17 @@ protected:
 	/** Bind this function to Steering Input */
 	UFUNCTION(BlueprintCallable, Category="Speed and Accleration")
 	void Steer(float Input);
-	
-	void ApplyWheelsSuspension(USceneComponent* TargetWheel); // Call on Tick()
+
+	/** Bind this function to Steering Input */
+	UFUNCTION(BlueprintCallable, Category="Speed and Accleration")
+	void RotateWheels(float Input);
+
+	void NormalizeWheelsRotation();
+	void ApplyWheelsSuspension(const USceneComponent* TargetWheel, UStaticMeshComponent* WheelMesh); // Call on Tick()
 	void CalculateSpeed();  // Call on Tick()
-	void ApplySpeed(const USceneComponent* Wheel); // Call on Tick()
+	void ApplySpeed(USceneComponent* Wheel); // Call on Tick()
+	void FixRotations();
+
 	
 	virtual void Tick(float DeltaTime) override;
 	virtual void PossessedBy(AController* NewController) override;
